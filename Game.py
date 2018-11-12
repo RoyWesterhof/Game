@@ -9,6 +9,9 @@ screen_width, screen_height = 640, 400
 black = (0, 0, 0)
 white = (255, 255, 255)
 
+dinoHeight = 43
+dinoWidth = 40
+
 jump = False
 duck = False
 jumped = 0
@@ -32,6 +35,7 @@ dinoImg = pygame.image.load('img\Player.png')
 # functies
 def dino(dino_x, dino_y):
     screen.blit(dinoImg, (dino_x, dino_y))
+
 
 # voorwaarden loop
 death = False
@@ -68,6 +72,12 @@ while not death:
             jump = False
     elif jumped > 0 and not jump:
         jumped -= 8
+
+    if duck:
+        dinoImg = pygame.image.load('img\PlayerDuck.png')
+    elif not duck:
+        dinoImg = pygame.image.load('img\Player.png')
+
 
     screen.fill(white)
 

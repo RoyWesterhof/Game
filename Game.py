@@ -73,8 +73,9 @@ while not death:
     elif jumped > 0 and not jump:
         jumped -= 8
 
-    if duck:
+    if duck and jumped == 0:
         dinoImg = pygame.image.load('img\PlayerDuck.png')
+        dinoHeight = dinoHeight / 2
     elif not duck:
         dinoImg = pygame.image.load('img\Player.png')
 

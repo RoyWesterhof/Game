@@ -1,0 +1,6 @@
+python downloaden
+pycharm downloaden
+
+pycharm --> project Game
+
+File --> settings --> project: game --> project interpreter --> pygame toevoegen.
